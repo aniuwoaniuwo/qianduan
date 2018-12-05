@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function function1()
+    {
+    alert('Hello, world');
+    document.getElementById("daqo").innerHTML="变成这个样子了，快看哈哈！";
+
+    }
+    function function3()
+    {
+    document.write(Date());
+    }
+</script>
+</head>
+
+<body>
+<h1>hi!it is raining day!</h1>
+
+<p id="daqo">这里要变了</p>
+
+<button type="button" onclick="function1()">点击我，快！</button>
+<script>
+//这是注释
+    document.write("<p>这是一个脚本写的段落<p>");
+</script>
+<hr style="color:red;margin:10px;">
+<p id="daqo1">这里也要变了</p>
+<button type="button" onclick="function2()">点我这里啊!</button>
+<script type="text/javascript" src="/JavaScript/myjavascript.js">
+
+</script>
+
+<hr/>
+<button type="button" onclick="function3()">点我就会全都没有了信不信？</button>
+<p id="daqo2">亲爱的安德烈</p>
+<script>document.getElementById("daqo2").innerHTML="我本来叫亲爱的安德烈，现在是孩子你慢慢来"</script>
+<p><hr/>本来x=3,y=5+x,所以y等于多少？</p>
+<p id="daqo4">y=?</p>
+<button type="button" onclick="function4()">点击这里查看答案</button><br>
+<script>
+    function function4()
+    {
+    var x=3;
+    var y=5+x
+
+
+
+    document.getElementById("daqo4").innerHTML="y="+y;
+
+    }
+
+    var x=5;
+    document.write(x+"<br>");
+</script>
+55
+<hr/>
+<p>新的起点</p>
+<script>
+var mes="hello world";
+document.write(mes.toUpperCase()+"<br/>");
+document.write("hello world的长度是："+mes.length+"<hr/>");
+    var person={
+    firstname:"zhong",
+    lastname:"qq"
+    };
+    document.write(person.firstname+"<br>");
+    var cars=new Array("monday","sunday","saterday");
+    document.write(cars[1]);
+
+</script>
+<hr/>
+<script>
+    function function5(name,day)
+    {
+    alert("hello"+name+"today is"+day);
+    }
+
+
+</script>
+<p><button type="button" onclick="function5('tony','sunday')">点我有弹窗</button></p>
+<p id="daqo6">4*5等于多少?<br/></p>
+<script>
+    function function6(a,b)
+    {
+    return a*b;
+    }
+   document.getElementById("daqo6").innerHTML=function6(4,6);
+
+</script>
+<hr/>
+<p>现在做一项体重调查</p>
+请输入你的体重：<input id="daqo7" weight="100">
+<p>如果你的体重大于100，则为胖，否则为廋</p>
+<button type="button" onclick="function7()">提交</button>
+<p id="weight"></p>
+<script>
+    function function7()
+    {
+    var x,y;
+    x=document.getElementById("daqo7").value;
+    y=(x<100)?"太轻了":"太重了";
+    document.getElementById("weight").innerHTML=y;
+    }
+</script>
+<hr/>
+<p>根据时间弹出不同的问候</p>
+<p id="time"></p>
+
+<script>
+
+    function function8()
+    {
+    var x=new Date().getHours();
+    if (x<22)
+    {
+    document.getElementById("time").innerHTML=("现在是春天");
+    alert("春天好");
+    }
+    else if (x<23)
+    {
+    document.getElementById("time").innerHTML=("现在是夏天");
+    alert("夏天好");
+
+    }
+    else
+    {
+    document.getElementById("time").innerHTML=("都好");
+    alert("都好");}
+    }
+
+</script>
+<button type="button" onclick="function8()">点击</button>
+<hr/>
+<p>点击下面按钮会显示星期几</p>
+<p><button type="button" onclick="function9()">按钮</button></p>
+<p id="daqo9"></p>
+<script>
+    function function9()
+    {
+    var x="";
+    var y=new Date().getDay();
+    switch(y)
+    {case 1:
+        x="today is monday!";
+        break;
+       case 2:
+        x="today is tuesday!";
+        break;
+        case 3:
+        x="today is wednesday!";
+        break;
+        case 4:
+        x="today is thursday!";
+        break;
+        case 5:
+        x="today is friday!";
+        break;
+        default:
+        x="today is weekend";
+
+    }
+    document.getElementById("daqo9").innerHTML=x;
+    }
+
+
+
+</script>
+<hr>
+<p>下面讲的是循环，有for while循环</p>
+<button type="button"onclick="function11()">点击</button>
+<p id="daqo11"></p>
+<script>
+function function11()
+{
+    var car=["tony","tom","ciny"];
+    var name="";
+    for (var i=0;i<10;i++)
+    {
+    if (i==8)
+    {break;}
+    if (i==4)
+    {continue;}
+    name= name + "I am "+i+"<br>";
+
+    }
+    document.getElementById("daqo11").innerHTML=name;
+    }
+
+
+</script>
+<p>显示for in 循环</p>
+<button type="button" onclick="function12()">点击</button>
+<p id="daqo12"></p>
+<script>
+    function function12()
+    {
+    var x;
+    var ten="";
+    var cay={name:"tony",age:18,inte:"socore"};
+    for (x in cay)
+    {
+    ten =ten+cay[x];
+    }
+    document.getElementById("daqo12").innerHTML=ten;
+    }
+
+</script>
+<p>现在是while</p>
+<script>
+   day=["monday","tuesday","wendneday"];
+   var i=0
+   while (day[i])
+   {
+   document.write(day[i]+"<br>");
+   i++;
+   }
+
+</script>
+<p>错误</p>
+<script>
+var txt="";
+    function function13()
+    {
+    try
+    {
+    document.wrie("snsjnc")
+    }
+    catch(err)
+    {
+    txt="本页有一个错误。\n\n";
+  txt+="错误描述：" + err.message + "\n\n";
+  txt+="点击确定继续。\n\n";
+  alert(txt);
+    }
+    }
+</script>
+<p><input type="button" value="查看消息" onclick="function13()"></p>
+<hr/>
+
+<script>
+for (slug1 in range(3))
+    {
+    <a >slug1</a>;
+    }</script>
+</body>
+
+</html>
